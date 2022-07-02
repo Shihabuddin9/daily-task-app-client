@@ -7,7 +7,7 @@ const UpdateTask = () => {
     const [tasks, setTasks] = useState({})
 
     useEffect(() => {
-        const url = `http://localhost:5000/allTask/${id}`
+        const url = `https://maple-leaf-64017.herokuapp.com/allTask/${id}`
         fetch(url)
             .then(response => response.json())
             .then(data => setTasks(data))
@@ -23,7 +23,7 @@ const UpdateTask = () => {
 
         const updateTask = { newTask }
 
-        const url = `http://localhost:5000/allTask/${id}`
+        const url = `https://maple-leaf-64017.herokuapp.com/allTask/${id}`
         fetch(url, {
             method: 'PUT', // or 'PUT'
             headers: {

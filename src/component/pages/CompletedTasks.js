@@ -6,7 +6,7 @@ const CompletedTasks = () => {
     const [completedTasks, setCompletedTasks] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/completed')
+        fetch('https://maple-leaf-64017.herokuapp.com/completed')
             .then(response => response.json())
             .then(data => setCompletedTasks(data))
 
@@ -15,7 +15,7 @@ const CompletedTasks = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, You want to Delete?')
         if (proceed) {
-            const url = `http://localhost:5000/completed/${id}`
+            const url = `https://maple-leaf-64017.herokuapp.com/completed/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

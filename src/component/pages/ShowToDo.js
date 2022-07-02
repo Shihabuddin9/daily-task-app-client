@@ -8,7 +8,7 @@ const ShowToDo = () => {
     const [allTasks, setAllTasks] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/allTask')
+        fetch('https://maple-leaf-64017.herokuapp.com/allTask')
             .then(response => response.json())
             .then(data => setAllTasks(data))
 
@@ -17,7 +17,7 @@ const ShowToDo = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, You want to Delete?')
         if (proceed) {
-            const url = `http://localhost:5000/allTask/${id}`
+            const url = `https://maple-leaf-64017.herokuapp.com/allTask/${id}`
             fetch(url, {
                 method: 'DELETE'
             })
@@ -36,7 +36,7 @@ const ShowToDo = () => {
         // const completed = e.target.value
 
         const completedTask = { completed }
-        fetch('http://localhost:5000/completed', {
+        fetch('https://maple-leaf-64017.herokuapp.com/completed', {
             method: 'POST', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ const ShowToDo = () => {
     const handleCompletedDelete = (id) => {
 
 
-        const url = `http://localhost:5000/allTask/${id}`
+        const url = `https://maple-leaf-64017.herokuapp.com/allTask/${id}`
         fetch(url, {
             method: 'DELETE'
         })

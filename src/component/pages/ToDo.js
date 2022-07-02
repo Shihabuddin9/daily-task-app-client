@@ -10,7 +10,7 @@ const ToDo = () => {
 
         const userTask = { newTask }
 
-        fetch('http://localhost:5000/task', {
+        fetch('https://maple-leaf-64017.herokuapp.com/task', {
             method: 'POST', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',

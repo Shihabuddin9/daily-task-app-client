@@ -7,6 +7,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import UpdateTask from './component/pages/UpdateTask';
 import CompletedTasks from './component/pages/CompletedTasks';
+import Calendar from './component/pages/Calendar';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/' element={<ToDo></ToDo>}></Route>
         <Route path='/updateTask/:id' element={<UpdateTask></UpdateTask>}></Route>
         <Route path='completedTasks' element={<CompletedTasks></CompletedTasks>}></Route>
+        <Route path='calendar' element={<Calendar></Calendar>}></Route>
       </Routes>
       <Footer></Footer>
       <ToastContainer></ToastContainer>
